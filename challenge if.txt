@@ -1,0 +1,12 @@
+int main() {
+   int annee;
+   printf("entrer l'annee");
+   scanf("%d",&annee);
+   if((annee % 4==0 && annee % 100 != 0) || (annee % 400 == 0)){
+       printf("annee %d est bessixetille\n",annee);
+   }
+else{
+    printf("annee %d est non bessixetille",annee);
+}
+    return 0;
+}
