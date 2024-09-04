@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int nombre;
+    printf("entrer le nombre d'element: ");
+    scanf("%d",&nombre);
+    int tableau[nombre];
+    for(int i=0 ; i<nombre ; i++){
+        printf("entrer l'element %d",i+1);
+        scanf("%d",&tableau[i]);
+    }
+    return 0;
+}
