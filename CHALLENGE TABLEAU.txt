@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    printf("entrer 10 nombres");
+    int nombres[10];
+    for(int i=0 ; i<10 ; i++){
+        scanf("%d",&nombres[i]);
+    }
+    int somme=0;
+    for(int r=0 ; r<10 ; r++){
+     if(nombres[r] % 3 == 0 || nombres[r] % 5 == 0){
+         somme=nombres[r];
+     }   
+    }
+    printf("somme est %d",somme);
+    return 0;
+}
