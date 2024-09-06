@@ -1,0 +1,21 @@
+ //créer un programme en c pour gérer un carnet de contacts.le programme doit permettre à l'utilisateur d'ajouter , dr rechercher,de modifier,de supprimer et d'afficher des contacts.chaque contact doit contenir un nom,un numéro de téléphone et une adresse e-mail.
+#include <stdio.h>
+#include <string.h>
+
+struct contact{
+    char nom[12];
+    char numero[34];
+    char email[20];
+};
+
+int main() {
+    struct contact c2;
+  strcpy(c2.nom,"ilham");
+  strcpy(c2.numero,"8765488");
+  strcpy(c2.email,"ilhamKT45@gmail.com");
+  
+  printf("votre nom est %s\n et ton numero est %s\n et email %s",c2.nom,c2.numero,c2.email);
+  
+ 
+    return 0;
+}
