@@ -1,0 +1,12 @@
+//ecrivez un programme en c qui verifie si un caractere saisi par l'utiliseur est une voyelle ou non en utilisant l'instruction
+#include <stdio.h>
+
+
+int main() {
+  int n1,n2,somme;
+   printf("entrer deux nombres: ");
+  scanf("%d %d",&n1,&n2);
+  somme=n1+n2;
+  printf("la somme de deux nombre est = %d",somme);
+    return 0;
+}
