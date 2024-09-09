@@ -5,7 +5,7 @@ int main()
     int nombre;
     printf("entrer le nombre: ");
     scanf("%d",&nombre);
-    if(nombre>0){
+    if(nombre % 2 == 0){
        printf("nombre %d est pair\n",nombre);
     }
    else{
