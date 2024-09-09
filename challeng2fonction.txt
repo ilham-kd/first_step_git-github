@@ -1,0 +1,14 @@
+//ecrivez une fontion en c qui prend deux entiers en parametres et retourne leur produit.creez un programme principal qui utilise cette fonction pour afficher le produit de deux nombres.
+#include <stdio.h>
+
+int multiplication(int z,int y){
+    return z*y;
+}
+int main() {
+    int g,h;
+    printf("entrer valeur:");
+   scanf("%d %d",&g,&h);
+   
+   printf("multiplication est %d*%d=%d",g,h,g*h);
+    return 0;
+}

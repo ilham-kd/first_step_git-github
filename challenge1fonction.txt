@@ -7,7 +7,7 @@ int somme(int m,int n){
 
 int main() {
     int d,c;
-    printf("entrer valeur:\n");
+    printf("entrer valeur:");
     scanf("%d %d",&d,&c);
     printf("la somme est %d+%d=%d",d,c,d+c);
    
