@@ -1,0 +1,15 @@
+//ecrivez une fonction en c qui prend deux entiers en parametres et retourne leur somme.creez un programme principal qui utilise cette fonction pour afficher la somme de deux nombres.
+#include <stdio.h>
+
+int somme(int m,int n){
+   return m+n; 
+}
+
+int main() {
+    int d,c;
+    printf("entrer valeur:\n");
+    scanf("%d %d",&d,&c);
+    printf("la somme est %d+%d=%d",d,c,d+c);
+   
+    return 0;
+}
