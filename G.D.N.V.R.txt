@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+
+int main() {
+    char etudiant[5];
+    printf("combien d'etudiant:");
+    scanf("%s", etudiant[5]);
+    for(int i=0;i<5;i++){
+    printf("entrer la note de l'etudiant:\n");
+    scanf("%s", etudiant[5]);
+  }
+   char choix;
+   printf("entrer votre choix:\n");
+   scanf("%s", choix);
+   
+    return 0;
+}
