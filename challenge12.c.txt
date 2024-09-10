@@ -1,0 +1,15 @@
+// ecrivez un programme c qui inverse les elements d'un tableau d'entier dans un autre tableau.affichez les elements du tableau original et du tableau copie pour verifier que la copie pour verifier que la copie est correcte
+#include <stdio.h>
+
+int main() {
+     int nombres[] = {7, 9, 10, 75, 60};
+    int element = sizeof(nombres) / sizeof(nombres[0]);
+
+    for (int i = 0; i < element; i++) {
+        if (nombres[i] % 2 == 0) {
+            printf("le nombre paire est %d\n", nombres[i]);
+        } 
+    }
+
+    return 0;
+}
