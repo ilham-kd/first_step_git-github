@@ -1,0 +1,31 @@
+//ecrivez un programme c qui demande a l'utilisateur de saisir un tableau d'entiers,puis affiche le tableau trie en ordre croissant
+ sans utiliser de fonction de tri predefinie.
+#include <stdio.h>
+
+int main()
+{
+int remplacement,nombre;
+printf("entrer nombre: ");
+scanf("%d",&nombre);
+int tableau[nombre];
+for(int i=0;i<nombre;i++){
+printf("tableau [%d]:",i + 1);
+scanf("%d",&tableau[i]);
+}
+for(int a= 0;a<nombre;a++){
+    for(int b= a +1;b<nombre;b++){
+        if(tableau[a]<tableau[b]){
+            remplacement=tableau[a];
+            tableau[a]=tableau[b];
+            tableau[b]=remplacement;
+        }
+    }
+}
+
+printf("le nombre croissant est: \n");
+for(int a=0;a<nombre;a++){
+    printf("%d \n",tableau[a]);
+}
+
+    return 0;
+}
