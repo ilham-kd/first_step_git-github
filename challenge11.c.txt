@@ -1,0 +1,15 @@
+// ecrivez un programme c qui affiche uniquement les elements impairs d'un tableau d'entiers.le programme doit demander le nombre d'elements et les elements du tableau.
+#include <stdio.h>
+
+int main() {
+     int nombres[] = {8, 2, 91, 57, 24};
+    int element = sizeof(nombres) / sizeof(nombres[0]);
+
+    for (int i = 0; i < element; i++) {
+        if (nombres[i] % 2 != 0) {
+            printf("le nombre impaire est %d\n", nombres[i]);
+        } 
+    }
+
+    return 0;
+}

@@ -1,4 +1,4 @@
-// ecrivez un programme c qui inverse les elements d'un tableau d'entier dans un autre tableau.affichez les elements du tableau original et du tableau copie pour verifier que la copie pour verifier que la copie est correcte
+// ecrivez un programme c qui affiche uniquement les elements pairs d'un tableau d'entiers.le programme doit demander le nombre d'elements et les elements du tableau.
 #include <stdio.h>
 
 int main() {
