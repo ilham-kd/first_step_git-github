@@ -1,0 +1,22 @@
+//ecrivez un programme c qui multiple chaque element d'un tableau d'entiers par un facteuer donne et affiche le tableau resultant.le programme doit demander le nombre d'element,les elements du tableau, et le facteur de multiplication.
+#include <stdio.h>
+
+int main()
+{
+ int i, nombre, multiple;
+   int tableau[50];
+ 
+   printf(" Entrez  nombre d'éléments dans tableau: ");
+   scanf("%d", &nombre);
+ 
+   printf(" Entrez  éléments du tableau: ",i+1);
+   for (int i = 0; i < nombre; i++){
+      scanf("%d", &tableau[i]);
+   }
+   multiple= 1;
+   for (int i = 0; i < nombre; i++){
+      multiple=multiple*tableau[i];
+   }
+   printf(" La multiple = %d", multiple);
+    return 0;
+}
