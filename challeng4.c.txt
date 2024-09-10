@@ -1,0 +1,16 @@
+//ecrivez un programme c qui trouve et affiche le plus grand element dans un tableau d'entiers.le programme doit demander le nombre d'elements et les elements du tableau.
+#include <stdio.h>
+
+int main()
+{
+ int tableau[]={89,24,56,35,57,41,25};
+ int nombre=sizeof(tableau)/sizeof(tableau[0]);
+ int maximum=tableau[0];
+ for(int i=0;i<nombre;i++){
+     if(maximum<tableau[i]){
+     maximum=tableau[i];
+ }
+ }
+ printf("maximum de nombre est:%d",maximum);
+    return 0;
+}
