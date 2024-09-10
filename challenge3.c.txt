@@ -1,0 +1,23 @@
+//ecrivez un programme c qui calcule et affiche la somme des elements d'un tableau d'entiers.le programme doit demander le nommbre puis les elements du tableau.afficher la somme totale.
+#include <stdio.h>
+
+
+int main() {
+   int i, nombre, somme;
+   int tableau[100];
+ 
+   printf(" Entrez  nombre d'éléments dans tableau: ");
+   scanf("%d", &nombre);
+ 
+   printf(" Entrez  éléments du tableau: ",i+1);
+   for (int i = 0; i < nombre; i++){
+      scanf("%d", &tableau[i]);
+   }
+   somme = 0;
+   for (int i = 0; i < nombre; i++){
+      somme = somme + tableau[i];
+   }
+   printf(" La somme = %d", somme);
+ 
+    return 0;
+}
