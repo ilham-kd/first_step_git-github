@@ -1,0 +1,143 @@
+#include <stdio.h>
+#include <string.h>
+
+struct date {
+    char jour[3];
+    char mois[3];
+    char annee[5];
+};
+
+struct information {
+    char numero[88];
+    char nom[54];
+    char prenom[69];
+    char departement[87];
+    float note;
+    struct date naissance;
+};
+
+
+void ajouter(struct information etudiants[], int nb){
+
+    printf("numero est: ");
+    scanf("%s",etudiants[nb].numero);
+    printf("nom est: ");
+    scanf("%s",etudiants[nb].nom);
+    printf("prenom est: ");
+    scanf("%s",etudiants[nb].prenom);
+    printf("departement est: ");
+    scanf("%s",etudiants[nb].departement);
+    printf("note est: ");
+    scanf("%f",&etudiants[nb].note);
+    printf(" date naissance est: ");
+    scanf("%s\n %s\n %s",etudiants[nb].naissance.jour,etudiants[nb].naissance.mois,etudiants[nb].naissance.annee);
+}
+void afficher(struct information etudiants[], int nb){
+   for(int i=0;i<nb;i++){
+printf("\nnumero: %s\n",etudiants[i].numero);
+printf("nom: %s\n",etudiants[i].nom);
+printf("prenom: %s\n",etudiants[i].prenom);
+printf("departement: %s\n",etudiants[i].departement);
+printf("note: %f \n",&etudiants[i].note);
+printf("date naissance: %s\n %s\n %s\n",etudiants[i].naissance.jour,etudiants[i].naissance.mois,etudiants[i].naissance.annee);
+}
+}
+void modifier(struct information etudiants[], int nb) {
+    char lemodifier[50];
+    printf("entrer le numero unique de l'etudiant: ");
+    scanf("%s", lemodifierh);
+    for (int i = 0; i < nb; i++) {
+        if (strcmp(etudiants[i].numero,  lemodifier) == 0) {
+            printf("\nnouveau nom: ");
+            scanf("%s", etudiants[i].nom);
+            printf("nouveau prenom: ");
+            scanf("%s", etudiants[i].prenom);
+            printf("nouveau departement: ");
+            scanf("%s", etudiants[i].departement);
+            printf("nouveau note: ");
+            scanf("%f", &etudiants[i].note);
+            printf("nouveau date de naissance (jour mois annee): ");
+            scanf("%s %s %s", etudiants[i].naissance.jour,etudiants[i].naissance.mois, etudiants[i].naissance.annee);
+            return;
+        }
+    }
+    printf("numero n'existe pas\n");
+}
+
+void moyennegeneral(struct information etudiants[], int nb){
+    if (nb == 0) {
+        printf("Aucun etudiant enregistre\n");
+        return;
+    }
+    float somme = 0;
+    for (int i = 0; i < nb; i++) {
+        somme += etudiants[i].note;
+    }
+    float moyenne = somme / nb;
+    printf("moyenne generale est: %.2f\n", moyenne);
+}
+void statistique(struct information etudiants[], int nb) {
+    if (nb <= 0) {
+        printf("aucun d'etudiants  inscrit.\n");
+
+    }else{
+    printf("Nombre d'etudiants est:%d.\n",nb);
+
+
+
+    }
+    float somme = 0;
+    float min = etudiants[0].note;
+    float max = etudiants[0].note;
+    for (int i = 0; i < nb; i++) {
+        float note = etudiants[i].note;
+        somme += note;
+        if (note < min) {
+            min = note;
+        }
+        if (note > max) {
+            max = note;
+        }
+    }
+    float moyenne = somme / nb;
+    printf("Moyenne des notes: %.2f\n", moyenne);
+    printf("Note la plus basse: %.2f\n", min);
+    printf("Note la plus haute: %.2f\n", max);
+}
+
+int main() {
+    int nb = 0;
+    struct information etudiants[100];
+    int menu;
+    do {
+        printf("pour ajouter cliquer 1.\npour modifier cliquer 2.\npour afficher cliquer 3.\npour moyenne general cliquer 4.\npour statistique cliquer 5.\npour quitter cliquer 6.\n");
+        printf(" \n entrez votre choix: ");
+        scanf("%d", &menu);
+
+        switch (menu) {
+            case 1:
+                ajouter(etudiants, nb);
+                nb++;
+                break;
+            case 2:
+                modifier(etudiants, nb);
+                break;
+            case 3:
+                afficher(etudiants, nb);
+                break;
+            case 4:
+                moyennegeneral(etudiants, nb);
+                break;
+            case 5:statistique(etudiants, nb);
+                break;
+            case 6:printf("quitter...\n");
+                break;
+            default:
+                printf("Option invalide\n");
+                break;
+        }
+
+    } while (menu != 6);
+
+    return 0;
+}
